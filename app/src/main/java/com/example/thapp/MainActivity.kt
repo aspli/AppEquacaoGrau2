@@ -42,14 +42,23 @@ class MainActivity : AppCompatActivity() {
                     param.putString("texto", textoParaResultado)
                     intent.putExtras(param)
                     startActivity(intent)
+                    textA.text.clear()
+                    textB.text.clear()
+                    textC.text.clear()
+                    textA.requestFocus()
+
             }
             else {
                 x1 = (-b.toDouble() + sqrt(delta)) / (2 * a.toDouble())
                 x2 = (-b.toDouble() - sqrt(delta)) / (2 * a.toDouble())
-                var textoParaResultado = "X1=$x1 X2=$x2"
+                var textoParaResultado = "X1 = $x1  X2 = $x2"
                 param.putString("texto", textoParaResultado)
                 intent.putExtras(param)
                 startActivity(intent)
+                textA.text.clear()
+                textB.text.clear()
+                textC.text.clear()
+                textA.requestFocus()
             }
         }
     }
